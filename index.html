@@ -1,13 +1,34 @@
-<!doctype html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="https://cdn.tailwindcss.com"></script>
-<title>LaScèneRP</title>
-<style>body{background:#09090b} .glow{box-shadow:0 0 120px rgba(220,38,38,.25)}</style>
-</head><body class="min-h-screen flex items-center justify-center text-white overflow-hidden">
-<div class="absolute w-[500px] h-[500px] rounded-full bg-red-600/20 blur-3xl glow"></div>
-<div class="relative text-center px-6">
-<img src="public/logo.svg" class="w-28 h-28 mx-auto mb-8">
-<h1 class="text-5xl font-bold">En cours de création...</h1>
-<p class="mt-5 text-zinc-400 max-w-lg">Une nouvelle expérience Garry's Mod RolePlay est actuellement en développement.</p>
-<p class="mt-8 text-red-500 tracking-[0.3em] uppercase">lascenerp.com</p>
-</div></body></html>
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-950 text-white">
+      {/* Glow */}
+      <div className="absolute h-[500px] w-[500px] rounded-full bg-red-600/20 blur-3xl shadow-[0_0_120px_rgba(220,38,38,0.25)]" />
+
+      <div className="relative px-6 text-center">
+        <Image
+          src="/logo.svg"
+          alt="LaScèneRP"
+          width={112}
+          height={112}
+          className="mx-auto mb-8"
+          priority
+        />
+
+        <h1 className="text-5xl font-bold">
+          En cours de création...
+        </h1>
+
+        <p className="mx-auto mt-5 max-w-lg text-zinc-400">
+          Une nouvelle expérience Garry&apos;s Mod RolePlay est actuellement en
+          développement.
+        </p>
+
+        <p className="mt-8 uppercase tracking-[0.3em] text-red-500">
+          lascenerp.com
+        </p>
+      </div>
+    </main>
+  );
+}
